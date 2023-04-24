@@ -1,0 +1,141 @@
+.songDetailContainer {
+  height: 100%;
+  
+  /* background: rgba(0, 0, 0, 0.2); */
+  background-image: radial-gradient(circle, #d16bb1, #d470bb, #d775c5, #d97acf, #db7fd9, #e37cd4, #eb78cf, #f275c9, #fc6ab0, #ff6295, #ff5e7a, #fb5f5f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 底座 */
+.circle {
+  position: relative;
+  z-index: 100;
+  height: 64rpx;
+  width: 64rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 10rpx 0;
+}
+
+/* 遥杆 */
+.needle {
+  position: relative;
+  z-index: 99;
+  top: -40rpx;
+  left: 56rpx;
+  width: 192rpx;
+  height: 274rpx;
+  transform-origin: 40rpx 0;
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+
+.needleRotate {
+  transform: rotate(0deg);
+}
+
+/* 磁盘区域 */
+.discContainer {
+  position: relative;
+  top: -170rpx;
+  height: 598rpx;
+  width: 598rpx;
+}
+
+.discAnimation {
+  animation: disc 7s linear infinite;
+  animation-delay: 0.3s;
+}
+
+/* @keyframes:设置动画帧
+1.from to:适用于简单的动画,只有起始帧和结束帧
+2.百分比:多用于复杂动画,不止两帧    0%-100%任意拆分
+ */
+@keyframes disc {
+  from {}
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.disc {
+  height: 598rpx;
+  width: 598rpx;
+}
+
+.musicImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+
+/* 底部控制区域 */
+.musicControl {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  width: 100%;
+  display: flex;
+
+}
+
+.musicControl text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 50rpx;
+}
+
+.musicControl text.big {
+  font-size: 90rpx;
+}
+
+/* 进度条控制区域 */
+.progressControl {
+  position: absolute;
+  bottom: 200rpx;
+  display: flex;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+
+}
+
+.barControl {
+  position: relative;
+  width: 450rpx;
+  height: 4rpx;
+  background: rgba(0, 0, 0, 0.4);
+  /* 上下左右外边距平分 */
+  margin: auto;
+}
+
+.realTime {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rpx;
+  width: 100rpx;
+  background: #f00;
+  z-index: 1;
+}
+.bodyCircle{
+  position: absolute;
+  right: -12rpx;
+  top: -4rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}

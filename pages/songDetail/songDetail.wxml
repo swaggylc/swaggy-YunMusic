@@ -1,0 +1,45 @@
+<view class="songDetailContainer">
+  <!-- 头部区域（歌手名） -->
+  <view class="author">
+    {{musicDetail[0].name}}-{{musicDetail[0].ar[0].name}}
+  </view>
+
+  <view class="circle">
+  </view>
+
+  <image src="/static/images/song/needle.png" mode="" class="needle {{isPlay?'needleRotate':''}}" />
+  <!-- 转盘区域 -->
+  <view class="discContainer {{isPlay?'discAnimation':''}}">
+    <image src="/static/images/song/disc.png" mode="" class="disc " />
+    <image src="{{musicDetail[0].al.picUrl}}" mode="" class="musicImg" />
+  </view>
+
+  <!-- 进度条控制区域 -->
+  <view class="progressControl">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barControl">
+      <!-- 实时进度条 -->
+      <view class="realTime" style="width: {{currentWidth+'rpx'}};">
+        <!-- 进度条的小圆球 -->
+        <view class="bodyCircle">
+
+        </view>
+      </view>
+    </view>
+    <text>{{allTime}}</text>
+  </view>
+
+  <!-- 底部控制播放区域 -->
+  <view class="musicControl">
+    <text class="iconfont icon-suijibofang"></text>
+
+    <text class="iconfont icon-shangyiqu" bindtap="handleSwitch" id="pre"></text>
+
+    <text class="iconfont {{isPlay?'icon-24gl-pauseCircle':'icon-24gl-playCircle'}} big" bindtap="headleMusicPlay"></text>
+
+    <text class="iconfont icon-xiayiqu" bindtap="handleSwitch" id="next"></text>
+
+    <text class="iconfont icon-gedan1"></text>
+  </view>
+</view>

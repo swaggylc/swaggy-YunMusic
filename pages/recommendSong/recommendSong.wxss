@@ -1,0 +1,92 @@
+.recommendSongContainer .header{
+  position: relative;
+  width: 100%;
+  height: 470rpx;
+}
+.recommendSongContainer .header image{
+  width: 100%;
+  height: 100%;
+
+}
+.recommendSongContainer .header .date{
+  position: absolute;
+  bottom: 25rpx;
+  left: 0%;
+
+
+  border: 1rpx solid #d43c33;
+  height: 100rpx;
+  width: 300rpx;
+  text-align: center;
+  
+  line-height: 100rpx;
+  border-radius: 25rpx;
+  background-color:rgba(0, 0, 0, 0.3);
+}
+.header .date text{
+  color: aliceblue;
+  font-size: 25px;
+}
+
+/* 列表区域的样式 */
+.ListContainer{
+  position: relative;
+  top: -25rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+}
+.ListHeader{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.ListHeader .changeMore{
+  float: right;
+}
+
+/* 内容区域 */
+.listScroll{
+  height: calc(100vh - 550rpx);
+}
+.scrollItem{
+  position: relative;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.scrollItem image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+}
+.musicInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  
+}
+.musicInfo text{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.musicInfo .vip{
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  right: 80rpx;
+  text-align: center;
+}
+.scrollItem .more{
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  right: 0;
+  text-align: center;
+}
+

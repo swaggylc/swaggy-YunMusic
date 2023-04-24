@@ -1,0 +1,32 @@
+<view class="recommendSongContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="../../static/images/recommendSong/meirituijian.jpg" mode=""/>
+    <view class="date">
+      <text class="month">{{month}} / </text>
+      <text class="day">{{day}}</text>
+    </view>
+  </view>
+
+  <!-- 歌曲列表区域 -->
+  <view class="ListContainer">
+    <view class="ListHeader">
+      <text>播放全部</text>
+      <text class="changeMore">多选</text>
+    </view>
+
+    <!-- 内容区域 -->
+    <scroll-view  class="listScroll" scroll-y>
+      <view class="scrollItem" wx:for="{{dailySongsList}}" wx:key="{{id}}" bindtap="toSongDetail" data-song="{{item}}" data-index="{{index}}">
+        <image src="{{item.al.picUrl}}" mode=""/>
+        <view class="musicInfo">
+          <text class="musicName">{{item.name}}</text>
+          <text class="iconfont icon-VIP1 vip" wx:if="{{item.fee===1}}"></text>
+          <text class="author">{{item.ar[0].name}}</text>
+        </view>
+
+        <text class="iconfont icon-androidgengduo more"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>
